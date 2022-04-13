@@ -49,8 +49,8 @@ int main()
 
   primeRange r1;
 
-  r1.min = 0;
-  r1.max = 20000000;
+  r1.min = 1;
+  r1.max = 2000000;
 
   calcPrimes(&r1);
 
@@ -61,7 +61,7 @@ int main()
 
   time_spent += (double)(end - begin) / CLOCKS_PER_SEC;
 
-  printf("The elapsed time is %f seconds\n", time_spent);
+  printf("The elapsed time is %0.15f seconds\n", time_spent);
   printf("---------------------------------------------");
 
   return 0;

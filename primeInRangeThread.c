@@ -72,7 +72,6 @@ int main()
     }
   }
   int totalPrimesFound = 0;
-  // free attribute and wait for the other threads
   pthread_attr_destroy(&attr);
   for (int t = 1; t <= NUM_THREADS; t++)
   {
@@ -92,7 +91,7 @@ int main()
   time_spent = (finish.tv_sec - start.tv_sec);
   time_spent += (finish.tv_nsec - start.tv_nsec) / 1000000000.0;
 
-  printf("The elapsed time is %0.2f seconds\n", time_spent);
+  printf("The elapsed time is %0.15f seconds\n", time_spent);
   printf("---------------------------------------------");
   pthread_exit(NULL);
 
